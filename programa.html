@@ -12,15 +12,16 @@
         }
         div {
             float: left;
-            width: 25%;
-            min-height: 280px;
-            margin: 1% 2.5%;
+            width: 29.5%;
+            min-height: 240px;
+            margin: 1% 0.2%;
             padding: 1.5em;
             text-align: center;
             background: #f0f0f0;
             border: solid 0.5px #000;
         }
-        div.texto-puro, div.calcula-consumo {
+        div.texto-puro, 
+        div.calcula-consumo {
             text-align: justify;
         }
         h1 {
@@ -34,8 +35,6 @@
         };
         strong {
             font-weight: bolder;
-            color: #500000;
-            font-size: 1.5em;
         }
     </style>
 </head>
@@ -142,6 +141,137 @@
             document.write("<h4>O consumo de combustível utilizando gasolina foi de: <strong>" + consumoDeGasolina + "</strong> Km/L</h4>");
             document.write("<br>")
             document.write("<h4>O consumo de combustível utilizando álcool foi de: <strong>" + consumoDeAlcool + "</strong> Km/L</h4>");
+        </script>
+    </div>
+    
+    <div class="pulo-linha">
+        <h1>*** Variável pulo de linha  ***</h1>
+        <script>
+            let puloLinha = "<br><br>";
+            nome = "Mágila";
+            let idade = "28";
+            let profissao = "programador";
+
+            document.write("Meu nome é: <strong>" + nome + "</strong>");
+            document.write(puloLinha);
+            document.write("Idade: <strong>" + idade + "</strong> anos");
+            document.write(puloLinha);
+            document.write("Profissão: <strong>" + profissao + "</strong>");
+        </script>
+    </div>
+
+    <div class="pular-imprimir">
+        <h1>*** Função pular linha e impressão de conteúdo  ***</h1>
+        <script>
+            function pularLinha() {
+                document.write("<br>");
+                document.write("<br>");
+            };
+
+            /* Função que recebe como parâmetro uma variável: "frase"
+                a variável frase possui como valor o conteúdo da chamada da função */
+            function mostra(frase) {
+                /* Impressão do conteúdo da variável frase */
+                document.write(frase);
+            };
+
+            nome = "Mágila";
+            idade = "28";
+            profissao = "programador";
+
+            /* Chamada da função */
+            mostra(/* conteúdo da chamada */"Meu nome é: <strong>" + nome + "</strong>");
+            pularLinha();
+
+            mostra("Idade: <strong>" + idade + "</strong> anos");
+            pularLinha();
+
+            mostra("Profissão: <strong>" + profissao + "</strong>");
+        </script>
+    </div>
+
+    <div class="funcao-dupla">
+        <h1>*** Função dupla  ***</h1>
+        <script>
+            /* Função sem parâmetro */
+            function pularLinha() {
+                document.write("<br>");
+                document.write("<br>");
+            };
+            /* Função com parâmetro "frase" */
+            function mostra(frase) {
+                document.write(frase);
+                /* Chamada primeira função */
+                pularLinha();
+            };
+
+            nome = "Mágila";
+            idade = "28";
+            profissao = "programador";
+
+            mostra("Meu nome é: <strong>" + nome + "</strong>");
+            mostra("Idade: <strong>" + idade + "</strong> anos");
+            mostra("Profissão: <strong>" + profissao + "</strong>");
+        </script>
+    </div>
+
+    <div class="pegadinha">
+        <h1>*** Pegadinha da Rafaela    ***</h1>
+        <script>
+            function fazPegadinha() {
+                alert("Olá");
+                alert("amiga!");
+                alert("Tá");
+                alert("bastante");
+                alert("entediada?");
+                alert("Em ficar");
+                alert("Clicando em");
+                alert("Ok");
+                alert("né?");
+            }
+            /* Chamada da função */
+            /* fazPegadinha(); */
+        </script>
+        <p><strong>Função comentada para evitar o alert.</strong></p>
+    </div>
+
+    <div class="gilberto">
+        <script>
+            function pulaLinha() {
+                document.write("<br><br>");
+            };
+            function gilberto() {
+                var titulo = "Bem-vindo ao meu programa!";
+
+                document.write("<h1>" + titulo + "</h1>");
+
+                document.write("Vocês não sabem o que tive que aprender para fazer isso!");
+                pulaLinha();
+
+                document.write("Contudo, assistindo os vídeos e estudando ...");
+                pulaLinha();
+
+                document.write("Eu vou mais longe!");
+            };
+            gilberto();
+        </script>
+    </div>
+
+    <div class="diferenca-idade">
+        <h1>*** Subtraindo a idade dos irmãos   ***</h1>
+        <script>
+            function diferencaIdade() {
+            let idadeMagila = 28;
+            let idadeEvelyn = 20;
+            let diferencaIdade = idadeMagila - idadeEvelyn;
+
+            document.write("Minha idade: <strong>" + idadeMagila + "</strong> anos.");
+            pulaLinha();
+            document.write("Idade da minha irmã: <strong>" + idadeEvelyn + "</strong> anos.");
+            pulaLinha();
+            document.write("Nossa diferença de idade é de: <strong>" + diferencaIdade + "</strong> anos.");
+            };
+            diferencaIdade();
         </script>
     </div>
 </body>
