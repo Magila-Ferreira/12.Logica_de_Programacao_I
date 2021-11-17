@@ -1,15 +1,22 @@
 body {
+    margin: 0;
+    padding: 0;
     width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 div {
-    float: left;
-    width: 29.5%;
-    min-height: 350px;
-    margin: 1% 0.2%;
-    padding: 1.5em;
+    width: 80%;
+    height: 200px;
+    margin: 2% auto;
+    padding: 2em;
     text-align: center;
     background: #f0f0f0;
     border: solid 0.5px #000;
+}
+#interacao-usuario div {
+    width: 70%;
+    height: 350px;
 }
 div.texto-puro, 
 div.calcula-consumo {

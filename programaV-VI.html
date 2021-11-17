@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. Lógica de programação V - VIII</title>
+
+    <link rel="stylesheet" href="logicaDeProgramacao.css">
+</head>
+<body id="interacao-usuario">
+    <div class="calculo-imc">
+        <h1>*** Cálculo do IMC  ***</h1>
+        <script>
+            function pulaLinha() {
+                document.write("<hr><br>");
+            };
+            function imprime(frase) {
+                document.write("<big>" +frase+ "</big>");
+                pulaLinha();
+            }
+            function calculaImc(nome, peso, altura) {
+                var imc = (peso / (altura * altura)).toFixed(2);
+                return("<big>O cálculo IMC da <strong>" + nome + "</strong> é: <strong class='destaque'>" + imc + "</strong></big>");
+            };
+
+            let ImcMagila = calculaImc("Mágila", 69, 1.69);
+            let ImcAndréa = calculaImc("Andréa", 59, 1.65);
+            let ImcLidy = calculaImc("Lidy", 67, 1.69);
+            let ImcNah = calculaImc("Nah", 60, 1.69); 
+
+            imprime(ImcMagila);
+            imprime(ImcAndréa);
+            imprime(ImcLidy);
+            imprime(ImcNah);
+        </script> 
+    </div>
+    <div class="soma-imc">
+        <h1>*** Soma dos IMC's calculados ***</h1>
+        <script>
+            function calculoDoImc(peso, altura) {
+                return (peso / (altura * altura)); 
+            }
+
+            let somaImc = calculoDoImc(69, 1.69) + calculoDoImc(59, 1.65) + calculoDoImc(67, 1.69) + calculoDoImc(60, 1.69);
+
+            imprime("<big>A soma dos IMC's é: <strong class='destaque'>" + somaImc.toFixed(2) + "</strong></big>");
+            imprime("<big>A média dos IMC's é: <strong class='destaque'>" + (somaImc/4).toFixed(2) + "</strong></big>");
+        </script>
+    </div>
+
+    <div class="interagindo-com-usuario">
+        <h1>***  Interagindo com o Usuário  ***</h1>
+        <script>
+            nome = prompt("*** Bem vindo ao programa! *** Por favor, digite seu nome: ");
+            peso = prompt(nome + ", qual o seu peso?");
+            altura = prompt(nome + ", qual a sua altura?");
+            
+            imprime("<strong class='destaque>'>" +nome+ "</strong>, você pesa <strong class='destaque'>" + peso + "</strong>kg e possui <strong class='destaque'>"+altura+ "</strong>m de altura.");
+
+            imc = calculoDoImc(peso, altura).toFixed(1);
+            imprime("<strong>" + nome + "</strong>, seu IMC é: <strong class='destaque'>" + imc + "</strong>.");
+
+            if(imc < 18.5) {
+                imprime("Você está <strong class='destaque'>abaixo</strong> do peso!");
+            } else if (imc > 18.5 && imc < 24.9) {
+                imprime("Você está com peso<strong class='destaque'> normal!</strong>");
+            } else if (imc > 25 && imc < 29.9) {
+                imprime("Você está com<strong class='destaque'> sobrepeso!</strong>");                
+            } else if (imc > 30 && imc < 34.9) {
+                imprime("Você está com<strong class='destaque'> obesidade Grau I!</strong>");
+            } else if (imc > 35 && imc < 39.9) {
+                imprime("Você está com<strong class='destaque'> Obesidade severa Grau II!</strong>");
+            } else {
+                imprime("Você está com<strong class='destaque'> obesidade mórbida Grau III!</strong>");
+            };
+
+        </script>
+    </div>
+
+    <div class="futebol">
+        <h1>*** futebol ***</h1>
+        <script>
+            function pontos(vitorias, empates, derrotas) {
+                return ((vitorias * 3) + (empates * 1) - (derrotas * 2));
+            };
+            
+            var time = prompt("Entre com o nome do seu time: ");
+            var vitorias = parseInt(prompt("Entre com o número de vitórias: "));
+            var empates = parseInt(prompt("Entre com o número de empares: "));
+            var derrotas = parseInt(prompt("Entre com o número de derrotas: "));
+            
+            var saldo = pontos(vitorias, empates, derrotas);
+
+            var comparacao = parseInt(prompt("Entre com o total de pontos do ano passado: "));
+
+            imprime("<strong class='destaque'>" + time + ":</strong>");
+            imprime("Vitórias: <strong class='destaque'>" + vitorias + ",</strong> Empates: <strong class='destaque'>" + empates + ", </strong> Derrotas: <strong class='destaque'>" + derrotas + ".</strong>");
+
+            imprime("Total: <strong class='destaque'>" + saldo + "</strong> pontos.");
+
+            if (saldo > comparacao) {            
+                imprime("Seu time está <strong class='destaque'>melhor</strong> do que o ano passado!");
+            } else if (saldo === comparacao) {
+                imprime("Seu time está <strong class='destaque'>igual</strong> ao ano passado!</strong>");
+            } else {
+                imprime("Seu time está <strong class='destaque'>pior</strong> do que o ano passado!");
+            }
+        </script>
+    </div>
+</body>
+</html>
