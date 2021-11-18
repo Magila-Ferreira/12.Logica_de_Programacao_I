@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VI</title>
+</head>
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br><hr>");
+        }
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+    </script>
+    
+    <div class="adivinha-numero">
+        <h1>*** Jogo de adivinhação ***</h1>
+        <script>
+            var numeroDefinido = Math.round(Math.random() * 10);
+            var numeroAdvinhacao = parseInt(prompt("Digite o número do seu chute: "));
+
+            console.log(numeroDefinido);
+
+            if (numeroAdvinhacao == numeroDefinido) {
+                mostra("<strong class='destaque'>Você acertou!!! </strong>");
+            } else {
+                mostra("Você errou, o número correto era: <strong class='destaque'>" +numeroDefinido + ".</strong>");
+            }
+        </script>
+    </div>
+    <div class="motorista">
+        <h1>*** Verificando se o usuário pode dirigir   ***</h1>
+        <script>
+            var idade = parseInt(prompt("Digite a sua idade: "));
+            var habilitacao = prompt("Você possui habilitação? Responda S ou N");
+
+            if (idade >= 18 && habilitacao == "S" || habilitacao == "s") {
+                mostra("Sim, você pode dirigir!!!");
+            } else if (idade >= 18 && habilitacao != "S") {
+                mostra("Não, você não pode dirigir porque não tem habilitação!!!");
+            } else {
+                mostra("Não, você não pode dirigir porque não tem idade suficiente e, consequentemente, não possui habilitação!!!");
+            }
+        </script>
+    </div>
+    <div class="sorteia-numero">
+        <h1>*** Jogo de adivinhação por sorteio ***</h1>
+        <script>
+            var numeroDefinido = sorteia(10);
+            var numeroAdvinhacao = parseInt(prompt("Digite o número do seu chute: "));
+
+            console.log(numeroDefinido);
+
+            if (numeroAdvinhacao == numeroDefinido) {
+                mostra("<strong class='destaque'>Você acertou!!! </strong>");
+            } else if (numeroAdvinhacao > numeroDefinido) {
+                mostra("Você errou, o número escolhido foi maior do que o número correto: <strong class='destaque'>" +numeroDefinido + ".</strong>");
+            } else {
+                mostra("Você errou, o número escolhido foi menor do que o número correto: <strong class='destaque'>" +numeroDefinido + ".</strong>");
+            }
+        </script>
+    </div>
+</body>
+</html>
