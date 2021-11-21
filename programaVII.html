@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VII</title>
+</head>
+
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write("<big class='item'>" + frase + "</big>");
+        }
+
+        function imprime(numero) {
+            pulaLinha();
+            document.write("<p class='item'>" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function imprimeZero(numero) {
+            pulaLinha();
+            document.write("<p class='item'> 0" + numero + '</p>');
+            pulaLinha();
+        }  
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+    </script>
+
+    <div class="anos-copa">
+        <h1>Anos de Copa</h1>
+        <div class="copas">
+            <script>
+                var anoCopa = 1930;
+                var edicao = 1;
+                var anoAtual = parseInt(prompt("Em que ano estamos?"));
+
+                if (anoCopa > anoAtual) {
+                    var divCopas = document.querySelector('div.copas');
+                    console.log(divCopas);
+                    divCopas.classList.remove("copas");
+                    divCopas.classList.add("antecede-copas");
+                    mostra("O ano escolhido <strong class='destaque'> antecede </strong> <strong> a 1ª copa! </strong>");
+                };
+
+                while (anoCopa <= anoAtual) {
+                    mostra("A <strong>" + edicao + "ª</strong> copa foi em: <strong class='destaque'>" + anoCopa + "</strong>");
+
+                    var colunas = document.querySelectorAll('.item');
+                    for (var i = 0; i < colunas.length; i++) {
+                        var linha = colunas[i];
+
+                        if (edicao % 2) {
+                            linha.classList.add("primeira-coluna");
+                            linha.classList.remove("item");
+                        } else {
+                            linha.classList.add("segunda-coluna");
+                            linha.classList.remove("item");
+                        }
+                        edicao = edicao + 1;
+                        anoCopa = anoCopa + 4;
+                    }
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="contagem">
+        <h1>*** Números Pares de 1 a 100 ***</h1>
+        <div class="numeros-pares">
+            <script>
+                var numeroInicial = 2;
+
+                while (numeroInicial <= 100) {
+                    if (numeroInicial < 10) {
+                        imprimeZero(numeroInicial);
+                    } else {
+                        imprime(numeroInicial);
+                    };
+
+                    var numeros = document.querySelectorAll(".item");
+
+                    for (var i = 0; i < numeros.length; i++) {
+                        var numero = numeros[i];
+
+                        if ((i % 5) == 0) {
+                            numero.classList.add('primeira-coluna');
+                        } else if ((i % 5) == 1) {
+                            numero.classList.add('segunda-coluna');
+                        } else if ((i % 5) == 2) {
+                            numero.classList.add('terceira-coluna');
+                        } else if ((i % 5) == 3) {
+                            numero.classList.add('quarta-coluna');
+                        } else if ((i % 5) == 4) {
+                            numero.classList.add('quinta-coluna');
+                        } else {};                       
+                    }
+                    numeroInicial = numeroInicial + 2;
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>
