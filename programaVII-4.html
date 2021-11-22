@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VII-4</title>
+</head>
+
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write("<big class='item'>" + frase + "</big>");
+        }
+
+        function imprime(numero) {
+            pulaLinha();
+            document.write("<p class='item'>" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function imprimeZero(numero) {
+            pulaLinha();
+            document.write("<p class='item'> 0" + numero + '</p>');
+            pulaLinha();
+        }  
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+    </script>
+
+    <div class="quadro-padrao">
+        <h1>
+            *** Imprimindo os números entre 30 e 40, com exceções ***
+        </h1>
+        <div class="quadroMenor-padrao">
+            <script>
+                var contador = 30;
+
+                while (contador <= 40) {
+                    if (contador !=  33 && contador != 37) {
+                        imprime(contador);
+                    } else {
+                        pulaLinha();
+                    }
+                    contador++;
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>*** Decrementando uma variável ***</h1>
+        <div class="quadroMenor-padrao">
+            <script>
+                contador = 20;
+                while (contador >= 0) {
+                    imprime(contador);
+                    contador--;
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

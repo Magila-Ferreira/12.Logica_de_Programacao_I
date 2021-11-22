@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VII-7</title>
+</head>
+
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write("<big class='item'>" + frase + "</big>");
+        }
+
+        function imprime(numero) {
+            pulaLinha();
+            document.write("<p class='item'>" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function imprimeZero(numero) {
+            pulaLinha();
+            document.write("<p class='item'> 0" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+    </script>
+
+    <div class="quadro-padrao">
+        <h1>
+            *** LOGIN ***
+        </h1>
+        <div class="quadroMenor-padrao">
+            <script>
+                var loginCadastrado = "alura";
+                var senhaCadastrada = "alura321";
+                var tentativaAtual = 1;
+                var tentativaMaxima = 3;
+
+                while (tentativaAtual <= tentativaMaxima) {
+                    var loginInformado = prompt("Informe seu login");
+                    var senhaInformada = prompt("Informe sua senha");
+
+                    if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+                        imprime("Bem-vindo ao sistema " + loginInformado + "!");
+                        tentativaAtual = tentativaMaxima;
+                    } else if (tentativaAtual == tentativaMaxima) {
+                        imprime("Número permitido de tentativas ultrapassado!");
+                    } else {
+                        alert("Login inválido. Tente novamente!");
+                    }
+                    tentativaAtual++;                        
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>*** ***</h1>
+        <div class="quadroMenor-padrao">
+            <script>
+
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

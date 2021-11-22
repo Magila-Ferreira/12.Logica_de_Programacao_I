@@ -31,7 +31,7 @@ div.sorteia-numero {
 }
 
 div.anos-copa, 
-div.contagem {
+div.contagem, div.quadro-padrao {
     height: auto;
 }
 
@@ -51,7 +51,7 @@ div.antecede-copas {
     border: none;
 }
 
-div.numeros-pares {
+div.numeros-pares, div.quadroMenor-padrao {
     width: 100%;
     padding: 0;
     height: auto;
@@ -75,6 +75,11 @@ h4 {
 
 p {
     padding: 0 2em;
+    color: #500000;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
+    display: inline;
 }
 
 ;
