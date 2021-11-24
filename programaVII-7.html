@@ -12,11 +12,12 @@
     <!-- FUNÇÕES DO PROGRAMA -->
     <script>
         function pulaLinha() {
-            document.write("<br>");
+            document.write("<br><br><br>");
         }
 
         function mostra(frase) {
             document.write("<big class='item'>" + frase + "</big>");
+            pulaLinha();
         }
 
         function imprime(numero) {
@@ -33,6 +34,10 @@
 
         function sorteia(n) {
             return Math.round(Math.random() * n);
+        }
+
+        function tabuada(numeroTabuada, multiplicador) {
+            return (numeroTabuada * multiplicador);
         }
     </script>
 
@@ -59,17 +64,46 @@
                     } else {
                         alert("Login inválido. Tente novamente!");
                     }
-                    tentativaAtual++;                        
+                    tentativaAtual++;
                 }
             </script>
         </div>
     </div>
 
     <div class="quadro-padrao">
-        <h1>*** ***</h1>
+        <h1>*** Tabuada de 100 números ***</h1>
         <div class="quadroMenor-padrao">
             <script>
+                alert("***  Tabuada de 100 números   ***");
+                var multiplicador = 0;
+                var numeroTabuada = parseInt(prompt("Digite o número da tabuada que deseja calcular: "));
 
+                while (multiplicador <= 100) {
+                    var resultado = tabuada(numeroTabuada, multiplicador);
+
+                    mostra(numeroTabuada + " x " + multiplicador + " = <strong class='destaque'>" + resultado + "</strong>");
+
+                    multiplicador++;
+                }
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>*** TABUADA ***</h1>
+        <div class="quadroMenor-padrao">
+            <script>
+                alert("***  Tabuada ***");
+
+                var numeroTabuada = parseInt(prompt("Digite o número da tabuada que deseja calcular: "));
+
+                var maiorProduto = parseInt(prompt("Digite o maior número que deseja multiplicar o número: " + numeroTabuada));
+
+                for (var multiplicador = 0; multiplicador <= maiorProduto; multiplicador++) {
+                    resultado = tabuada(numeroTabuada, multiplicador);
+
+                    mostra(numeroTabuada + " x " + multiplicador + " = <strong class='destaque'>" + resultado + "</strong>");
+                }
             </script>
         </div>
     </div>

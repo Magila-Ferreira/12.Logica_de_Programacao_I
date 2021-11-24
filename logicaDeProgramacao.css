@@ -73,6 +73,14 @@ h4 {
     margin-left: 2em;
 }
 
+big {
+    padding: 0 2em;
+    font-size: 1em;
+    font-weight: bolder;
+    text-align: center;
+    display: inline;
+}
+
 p {
     padding: 0 2em;
     color: #500000;
