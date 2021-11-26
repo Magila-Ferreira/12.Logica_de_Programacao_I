@@ -31,8 +31,15 @@ div.sorteia-numero {
 }
 
 div.anos-copa, 
+div.adivinha-numero,
+div.sorteia-numero,
 div.contagem, div.quadro-padrao {
     height: auto;
+}
+
+div.quadro-inferior {
+    height: auto;
+    border: none;
 }
 
 div.copas {
@@ -61,9 +68,17 @@ div.numeros-pares, div.quadroMenor-padrao {
     justify-content: center;
 }
 
+body div.quadro-centralizado {
+    margin-left: auto;
+    margin-bottom: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 h1 {
     color: #500000;
     font-size: 2em;
+    padding-bottom: 2em;
     font-weight: bolder;
     text-align: center;
     display: inline;
@@ -74,9 +89,7 @@ h4 {
 }
 
 big {
-    padding: 0 2em;
     font-size: 1em;
-    font-weight: bolder;
     text-align: center;
     display: inline;
 }

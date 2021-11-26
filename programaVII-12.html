@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VII-12</title>
+</head>
+
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        }
+
+        function imprime(numero) {
+            document.write("<p>" + numero + '</p>');
+        }
+
+        function imprimeZero(numero) {
+            pulaLinha();
+            document.write("<p class='item'> 0" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+
+        function tabuada(numeroTabuada, multiplicador) {
+            return (numeroTabuada * multiplicador);
+        }
+    </script>
+
+    <div class="quadro-padrao">
+        <h1>
+            *** MÉDIA DE IDADES DOS FAMILIARES ***
+        </h1>
+        <div class="quadro-inferior">
+            <script>
+                alert("Olá, bem vindo ao programa: CALCULA IDADE DOS FAMILIARES!");
+                var numeroFamiliares = parseInt(prompt("Digite o número de integrantes da sua família: "));
+
+                mostra("Sua família possui: <strong class='destaque'>" + numeroFamiliares + "</strong> integrantes");
+
+                var i = 1;
+                var somaIdades = 0;
+
+                while (i <= numeroFamiliares) {
+                    var idadesFamiliares = parseInt(prompt("Digite a idade do " + i + "º integrante da família: "));
+
+                    mostra("A idade do " + i + "º familiar é: " + idadesFamiliares);
+
+                    somaIdades = somaIdades + idadesFamiliares;
+                    i++;
+                }
+
+                mostra("Soma das idades: <strong class='destaque'>" + somaIdades + "</strong>");
+
+                var mediaIdades = (somaIdades / numeroFamiliares).toFixed(1);
+
+                mostra("Média das idades: <strong class='destaque'>" + mediaIdades + "</strong>");
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>
+            *** Média de Gastos em Eventos ***
+        </h1>
+
+        <div class="quadro-inferior">
+            <script>
+                var totalDeEventos = parseInt(prompt("Informe o total de eventos: "));
+                var contador = 1;
+                var totalGastoComEventos = 0;
+
+                while (contador <= totalDeEventos) {
+                    var gasto = parseFloat(prompt("Informe total gasto com o " + contador + "º evento: "));
+
+                    mostra("Valor gasto com o " + contador + "º evento: <strong class='destaque'>" + gasto + "</strong>");
+
+                    totalGastoComEventos = totalGastoComEventos + gasto;
+                    contador++;
+                }
+
+                var media = (totalGastoComEventos / totalDeEventos).toFixed(2);
+
+                mostra("A média de gastos é: <strong class='destaque'>" + media + "</strong>");
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-centralizado">
+        <h1>*** CÓDIGO ELEGANTE ***</h1>
+        <div class="quadro-padrao">
+            <script>
+                var contador = 1;
+                while (contador <= 3) {
+                    alert("Deixe-me entrar!");
+                    mostra(contador + "º pedido.")
+                    contador++;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
