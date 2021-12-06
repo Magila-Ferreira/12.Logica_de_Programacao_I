@@ -27,13 +27,16 @@ div.calcula-consumo {
 }
 
 div.sorteia-numero {
-    margin-left: 57%;
+    width: 100%;
+    margin-left: 45%;
 }
 
 div.anos-copa, 
 div.adivinha-numero,
+div.motorista,
 div.sorteia-numero,
-div.contagem, div.quadro-padrao {
+div.contagem, 
+div.quadro-padrao {
     height: auto;
 }
 
@@ -112,3 +115,4 @@ strong.destaque {
     font-size: 1.5em;
     color: #900000;
 }
+

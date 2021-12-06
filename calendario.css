@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: #e0e0e0;
+}
+
+div.calendario {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, auto);
+}
+
+section {
+    border: solid 0.5px #fff;
+    background: #f0f0f0;
+    width: 90%;
+    height: auto;
+    margin: 1% auto;
+    padding: 0 0.8em;
+}
+
+div.mes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 14%);
+    grid-template-rows: repeat(6, auto);
+    padding-bottom: 1em;
+}
+
+div.dia {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    margin: 0.2em auto;
+    text-align: center;    
+}
+
+strong.semana {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    margin: 0.2em auto;
+    text-align: center;    
+}
+
+h1 {
+    text-align: center;
+    color: #900000;
+    font-size: 2.5em;
+}
+
+h5 {
+    text-align: center;
+    color: #500000;
+    font-size: 1em;
+    margin: 1em auto;
+}
+
+.destaque {
+    color: #900000;
+} 

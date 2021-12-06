@@ -14,11 +14,14 @@
         function pulaLinhaDupla() {
             document.write("<br><br>");
         };
+        function pulaLinhaTripla() {
+            document.write("<br><br><br>");
+        }
         function pulaLinhaSublinhado() {
             document.write("<br><hr>");
         };
         function mostra(frase) {
-            pulaLinhaDupla();
+            pulaLinhaTripla();
             document.write("<big>" + frase + "</big>");
             pulaLinhaSublinhado();
         };
@@ -33,15 +36,16 @@
             var tentativa = 1;
             while (tentativa <= 3) {
                 var numeroDefinido = Math.round(Math.random() * 10);
+                console.log(numeroDefinido);
                 var numeroAdvinhacao = parseInt(prompt("Tentativa nº " + tentativa + ". Digite o seu chute: "));
 
                 if (numeroAdvinhacao == numeroDefinido) {
                     mostra("<strong class='destaque'>Você acertou!!! </strong>");
-                    tentativa = 3;
+                    break;
                 } else {
-                    mostra("Você errou, o número correto era: <strong class='destaque'>" + numeroDefinido + ".</strong> Tente novamente.");
-                    tentativa++;
+                    mostra("Você errou, o número correto era: <strong class='destaque'>" + numeroDefinido + ".</strong>");
                 }
+                tentativa++;
             }
         </script>
     </div>
@@ -49,16 +53,16 @@
         <h1>*** Verificando se o usuário pode dirigir ***</h1>
         <script>
             var idade = parseInt(prompt("Digite a sua idade: "));
-            var habilitacao = prompt("Você possui habilitação? Responda S ou N");
 
-            if (idade >= 18 && habilitacao == "s") {
-                mostra("Sim, você pode dirigir!!!");
-            } else if (idade >= 18 && habilitacao == "S") {
-                mostra("Sim, você pode dirigir!!!");
-            } else if (idade >= 18 && habilitacao != "s") {
-                mostra("Não, você não pode dirigir porque não tem habilitação!!!");
+            if (idade >= 18) {
+                var habilitacao = prompt("Você possui habilitação? Responda S ou N");
+                if (habilitacao == "S" || habilitacao == "s") {
+                    mostra("<strong class='destaque'>Sim, você pode dirigir!!!</strong>");
+                } else {
+                    mostra("<strong class='destaque'>Não, você não pode dirigir porque não tem habilitação!!!</strong>");
+                }
             } else {
-                mostra("Não, você não pode dirigir porque não tem idade suficiente e, consequentemente, não possui habilitação!!!");
+                mostra("<strong class='destaque'>Não, você não pode dirigir porque não tem idade suficiente e, consequentemente, não possui habilitação!!!</strong>");
             }
         </script>
     </div>
@@ -68,15 +72,16 @@
             tentativa = 1;
             while (tentativa <= 5) {
                 var numeroDefinido = sorteia(10);
+                console.log(numeroDefinido);
                 var numeroAdvinhacao = parseInt(prompt(tentativa + "ª tentativa. Digite o número do seu chute: "));
 
                 if (numeroAdvinhacao == numeroDefinido) {
-                    mostra("<strong class='destaque'>Você acertou!!! </strong>");
-                    tentativa = 5;
+                    mostra("<strong class='destaque'>Você acertou!!!<br> O número correto era: " + numeroDefinido + ".</strong>");
+                    break;
                 } else if (numeroAdvinhacao > numeroDefinido) {
-                    mostra("Você errou, o número escolhido foi maior do que o número correto: <strong class='destaque'>" + numeroDefinido + ".</strong>");
+                    mostra("Você errou, o número escolhido: <strong class='destaque'>" + numeroAdvinhacao + "</strong> foi maior do que o número correto: <strong class='destaque'>" + numeroDefinido + ".</strong>");
                 } else {
-                    mostra("Você errou, o número escolhido foi menor do que o número correto: <strong class='destaque'>" + numeroDefinido + ".</strong>");
+                    mostra("Você errou, o número escolhido: <strong class='destaque'>" + numeroAdvinhacao + "</strong> foi menor do que o número correto: <strong class='destaque'>" + numeroDefinido + ".</strong>");
                 }
                 tentativa++;
             }

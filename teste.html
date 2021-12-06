@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+
+<body>
+    <script>
+        var iniciaAno = 1;
+        var ano = parseInt(prompt("Ano calendário: "));
+        var diaSemana = 2;
+
+        document.write("Ano Calendário: " + ano);
+        document.write("<br><hr><br>");
+        document.write("Dia da semana: ");
+
+        
+
+        switch (diaSemana) {
+            case 0: document.write("Sábado");
+            break;
+            case 1: document.write("Domingo");
+            break;
+            case 2: document.write("Segunda");
+            break;
+            case 3: document.write("Terça");
+            break;
+            case 4: document.write("Quarta");
+            break;
+            case 5: document.write("Quinta");
+            break;
+            case 6: document.write("Sexta");
+            break;
+        }
+
+
+
+
+
+        /*         function dS(ano) {
+            var dia = 1;
+            var mes = 13;
+            var ano = ano - 1;
+            var k = (dia + (2 * mes) + (3 * (mes + 1) / 5) + ano + (ano / 4) - (ano / 100) + (ano / 400) + 2).toFixed(0);
+            var dS = k % 7;
+            console.log(k);
+            console.log(dS);
+        } */
+    </script>
+</body>
+
+</html>
