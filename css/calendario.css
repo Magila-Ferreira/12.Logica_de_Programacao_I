@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: #e0e0e0;
+    background: linear-gradient(#fafafa, #808080);
 }
 
 div.calendario {
@@ -15,11 +15,11 @@ div.calendario {
 }
 
 section {
-    border: solid 0.5px #fff;
-    background: #f0f0f0;
+    border: solid 2px #fff;
+    background: #fafafa;
     width: 90%;
     height: auto;
-    margin: 1% auto;
+    margin: 0.1em auto;
     padding: 0 0.8em;
 }
 
@@ -35,6 +35,7 @@ div.dia-jan,
 div.dia-fev,
 div.dia-mar,
 div.dia-abr,
+div.dia-mai,
 div.dia-jun,
 div.dia-jul,
 div.dia-ago,
@@ -72,4 +73,5 @@ h5 {
 
 .destaque {
     color: #900000;
+    font-weight: bolder;
 } 
