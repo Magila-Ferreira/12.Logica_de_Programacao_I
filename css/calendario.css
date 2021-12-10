@@ -31,7 +31,17 @@ div.mes {
     padding-bottom: 1em;
 }
 
-div.dia {
+div.dia-jan,
+div.dia-fev,
+div.dia-mar,
+div.dia-abr,
+div.dia-jun,
+div.dia-jul,
+div.dia-ago,
+div.dia-set,
+div.dia-out,
+div.dia-nov,
+div.dia-dez {
     display: flex;
     float: left;
     flex-wrap: wrap;
