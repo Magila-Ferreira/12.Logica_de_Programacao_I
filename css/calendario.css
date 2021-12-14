@@ -16,11 +16,14 @@ div.calendario {
 
 section {
     border: solid 2px #fff;
+    border-radius: 2%;
+    box-shadow: #900000;
     background: #fafafa;
-    width: 90%;
+    width: 80%;
     height: auto;
-    margin: 0.1em auto;
+    margin: 0 auto 0.5em auto;
     padding: 0 0.8em;
+    box-shadow: -20px 0 8px -6px #999;
 }
 
 div.mes {

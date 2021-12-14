@@ -2,10 +2,12 @@ function pulaLinha() {
     document.write("<br>");
 }
 function pulaLinhaDupla() {
-    document.write("<br><br>");
+    pulaLinha();
+    pulaLinha();
 }
 function pulaLinhaSublinhado() {
-    document.write("<br><hr>");
+    pulaLinha();
+    document.write("<hr>");
 }
 function mostraSemana(frase) {
     document.write(frase);

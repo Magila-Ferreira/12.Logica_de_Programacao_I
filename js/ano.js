@@ -70,20 +70,26 @@ function defineDiaDaSemana(mes) {
 
         case 2: console.log("Início do mês: Segunda");
             diasVazio = 1;
+            criaSemana(mes);
+            criaCalendario(numeroDias, diasVazio);
             break;
-        
+
         case 3: console.log("Início do mês: Terça");
             diasVazio = 2;
             criaSemana(mes);
             criaCalendario(numeroDias, diasVazio);
-        break;
+            break;
 
         case 4: console.log("Início do mês: Quarta");
             diasVazio = 3;
+            criaSemana(mes);
+            criaCalendario(numeroDias, diasVazio);
             break;
 
         case 5: console.log("Início do mês: Quinta");
             diasVazio = 4;
+            criaSemana(mes);
+            criaCalendario(numeroDias, diasVazio);
             break;
 
         case 6: console.log("Início do mês: Sexta");
@@ -122,7 +128,7 @@ function criaCalendario(numeroDias, diasVazio) {
     dia = 1;
     for (let i = 1; i <= 42; i++) {
         while (dia <= numeroDias) {
-            if (mes == 1) {
+            if (mes == 1) {      
                 mostraJan(dia);
             } else if (mes == 2) {
                 mostraFev(dia);
