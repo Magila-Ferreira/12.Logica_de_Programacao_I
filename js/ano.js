@@ -128,7 +128,7 @@ function criaCalendario(numeroDias, diasVazio) {
     dia = 1;
     for (let i = 1; i <= 42; i++) {
         while (dia <= numeroDias) {
-            if (mes == 1) {      
+            if (mes == 1) {
                 mostraJan(dia);
             } else if (mes == 2) {
                 mostraFev(dia);
@@ -191,6 +191,31 @@ function fdsDestaque(mes) {
                 if ((i % 7 == 0) || (i % 7 == 1)) {
                     numDia.classList.add("destaque");
                 }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
+                }
             }
             break;
 
@@ -199,6 +224,31 @@ function fdsDestaque(mes) {
                 var numDia = tdDias[i];
                 if ((i % 7 == 6) || (i % 7 == 0)) {
                     numDia.classList.add("destaque");
+                }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
                 }
             }
             break;
@@ -209,6 +259,31 @@ function fdsDestaque(mes) {
                 if ((i % 7 == 5) || (i % 7 == 6)) {
                     numDia.classList.add("destaque");
                 }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
+                }
             }
             break;
 
@@ -217,6 +292,31 @@ function fdsDestaque(mes) {
                 var numDia = tdDias[i];
                 if ((i % 7 == 4) || (i % 7 == 5)) {
                     numDia.classList.add("destaque");
+                }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
                 }
             }
             break;
@@ -227,6 +327,31 @@ function fdsDestaque(mes) {
                 if ((i % 7 == 3) || (i % 7 == 4)) {
                     numDia.classList.add("destaque");
                 }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
+                }
             }
             break;
 
@@ -235,6 +360,31 @@ function fdsDestaque(mes) {
                 var numDia = tdDias[i];
                 if ((i % 7 == 2) || (i % 7 == 3)) {
                     numDia.classList.add("destaque");
+                }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
                 }
             }
             break;
@@ -245,9 +395,35 @@ function fdsDestaque(mes) {
                 if ((i % 7 == 1) || (i % 7 == 2)) {
                     numDia.classList.add("destaque");
                 }
+
+                /* Destaque dos feriados NACIONAIS */
+                if (mes == 1) {
+                    tdDias[0].classList.add("destaque-light");
+                } 
+                if (mes == 4) {
+                    tdDias[20].classList.add("destaque-light");
+                }
+                if (mes == 5) {
+                    tdDias[0].classList.add("destaque-light");
+                }
+                if (mes == 9) {
+                    tdDias[6].classList.add("destaque-light");
+                }
+                if (mes == 10) {
+                    tdDias[11].classList.add("destaque-light");
+                    tdDias[27].classList.add("destaque-light");
+                }
+                if (mes == 11) {
+                    tdDias[1].classList.add("destaque-light");
+                    tdDias[14].classList.add("destaque-light");
+                }
+                if (mes == 12) {
+                    tdDias[24].classList.add("destaque-light");
+                }
             }
             break;
     }
 }
+
 
 
