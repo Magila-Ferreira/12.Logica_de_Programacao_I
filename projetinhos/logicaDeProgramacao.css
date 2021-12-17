@@ -95,6 +95,7 @@ big {
     font-size: 1em;
     text-align: center;
     display: inline;
+    padding: 0.5em 1em;
 }
 
 p {

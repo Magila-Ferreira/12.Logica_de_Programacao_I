@@ -75,6 +75,7 @@
         <div class="quadroMenor-padrao">
             <script>
                 alert("***  Tabuada de 100 números   ***");
+                pulaLinha();
                 var multiplicador = 0;
                 var numeroTabuada = parseInt(prompt("Digite o número da tabuada que deseja calcular: "));
 
@@ -102,6 +103,7 @@
                 for (var multiplicador = 0; multiplicador <= maiorProduto; multiplicador++) {
                     resultado = tabuada(numeroTabuada, multiplicador);
 
+                    pulaLinha();
                     mostra(numeroTabuada + " x " + multiplicador + " = <strong class='destaque'>" + resultado + "</strong>");
                 }
             </script>
@@ -114,6 +116,7 @@
             <script>
                 var i = 0;
                 while (i < 10) {
+                    pulaLinha();
                     mostra("O resultado é: " + (2 * i));
                     i++;
                 }

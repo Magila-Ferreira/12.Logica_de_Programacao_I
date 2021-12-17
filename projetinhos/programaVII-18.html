@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./logicaDeProgramacao.css">
+    <title>Programa VII - 18</title>
+</head>
+
+<body>
+    <!-- FUNÇÕES DO PROGRAMA -->
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write("<big class='item'>" + frase + "</big>");
+        }
+
+        function imprime(numero) {
+            pulaLinha();
+            document.write("<p class='item'>" + numero + '</p>');
+            pulaLinha();
+        }
+
+        function imprimeZero(numero) {
+            pulaLinha();
+            document.write("<p class='item'> 0" + numero + '</p>');
+            pulaLinha();
+        }  
+
+        function sorteia(n) {
+            return Math.round(Math.random() * n);
+        }
+    </script>
+
+    <div class="quadro-padrao">
+        <h1>Programa de Estrelas</h1>
+        <div class="quadro-inferior">
+            <script>
+                for (var colunas = 0; colunas < 3; colunas++) {
+                    for (var linhas = 0; linhas < 10; linhas++) {
+                        mostra("*");
+                    }
+                    pulaLinha();
+                }
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>

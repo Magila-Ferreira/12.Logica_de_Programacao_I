@@ -15,8 +15,8 @@
         <h3>A convenção que usaremos para criar nosso programa é adotar letras minúsculas e não usar acentos e, claro,
             usar a extensão .html.</h3>
 
-        <p>Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador
-            precisa recarregar a página para que a última alteração do arquivo entre em vigor.</p>
+        <h3>Outro ponto importante é que toda alteração feita no arquivo .html deve ser salva e, além disso, o navegador
+            precisa recarregar a página para que a última alteração do arquivo entre em vigor.</h3>
 
         <script>
             alert("Isso sim é um programa");
@@ -26,6 +26,7 @@
     <div class="programa">
         <h1>*** Programa ***</h1>
         <script>
+            document.write("<br>");
             document.write("A média das idades é: ");
             document.write("<strong class='destaque'>" + ( 20 + 10 + 30) / 3 + "</strong>");
         </script>
@@ -34,6 +35,7 @@
     <div class="calculo-gastos">
         <h1>*** Cálculo de gastos ***</h1>
         <script>
+            document.write("<br>");
             document.write("A média de gastos das viagens totalizaram: <br><br>")
             document.write("R$ " + "<strong class='destaque'>" + ((200.00 + 100.00 + 300.00 + 400.00) / 4).toFixed(2) + "</strong>" + " reais.");
         </script>
@@ -42,6 +44,7 @@
     <div class="prova">
         <h1>*** Prova ***</h1>
         <script>
+            document.write("<br>");
             document.write("Eu acertei: <strong class='destaque'>" + ((15 / 50) * 100) + "%</strong> das questões");
         </script>
     </div>
@@ -49,6 +52,7 @@
     <div class="namorada">
         <h1>*** Código de Rita  ***</h1>
         <script>
+            document.write("<br>");
             document.write("Flávio nasceu em: <strong class='destaque'>" + (2016 - 39) + "</strong><br>");
             document.write("Joaquim nasceu em: <strong class='destaque'>" + (2016 - 20) + "</strong><br>");
             document.write("Barney nasceu em: <strong class='destaque'>" + (2016 - 40) + "</strong>");
@@ -59,6 +63,7 @@
         <h1>*** Variáveis  ***</h1>
         <script>
             let ano = 2016;
+            document.write("<br>");
             document.write("Flávio nasceu em: <strong class='destaque'>" + (ano - 39) + "</strong><br>");
             document.write("Joaquim nasceu em: <strong class='destaque'>" + (ano - 20) + "</strong><br>");
             document.write("Barney nasceu em: <strong class='destaque'>" + (ano - 40) + "</strong>");
@@ -74,6 +79,7 @@
 
             let media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
 
+            document.write("<br>");
             document.write("A média das idades é: <strong class='destaque'>" + Math.round(media) + "</strong>");
             document.write("<br>");
             document.write("<br>");
@@ -93,6 +99,7 @@
 
             let totalIdades = idadeLinda + idadeGuaraciara + idadePerola;
 
+            document.write("<br>");
             document.write("A média das idades é: <strong class='destaque'>" + (totalIdades / 3).toFixed(2) + "</strong>");
         </script>
     </div>
@@ -121,6 +128,7 @@
             let idade = "28";
             let profissao = "programador";
 
+            document.write(puloLinha);
             document.write("Meu nome é: <strong class='destaque'>" + nome + "</strong>");
             document.write(puloLinha);
             document.write("Idade: <strong class='destaque'>" + idade + "</strong> anos");
@@ -139,6 +147,7 @@
             /* Função que recebe como parâmetro uma variável: "frase"
                 a variável frase possui como valor o conteúdo da chamada da função */
             function mostra(frase) {
+                pularLinha();
                 /* Impressão do conteúdo da variável frase */
                 document.write("<big>" + frase + "</big>");
             };
@@ -177,6 +186,7 @@
             idade = "28";
             profissao = "programador";
 
+            pularLinha();
             mostra("Meu nome é: <strong class='destaque'>" + nome + "</strong>");
             mostra("Idade: <strong class='destaque'>" + idade + "</strong> anos");
             mostra("Profissão: <strong class='destaque'>" + profissao + "</strong>");
@@ -200,7 +210,7 @@
             /* Chamada da função */
             /* fazPegadinha(); */
         </script>
-        <p><strong class='destaque'>Função comentada para evitar o alert.</strong></p>
+        <h3><strong class='destaque'>Função comentada para evitar o alert.</strong></h3>
     </div>
 
     <div class="gilberto">
@@ -212,6 +222,7 @@
                 var titulo = "Bem-vindo ao meu programa!";
 
                 document.write("<h1>" + titulo + "</h1>");
+                pularLinha();
 
                 document.write("Vocês não sabem o que tive que aprender para fazer isso!");
                 pulaLinha();
@@ -240,6 +251,7 @@
             let dtNascEvelyn = 2001;
             let anoAtual = 2021;
 
+            pularLinha();
             mostra("Minha idade: <strong class='destaque'>" + (anoAtual - dtNascMagila) + "</strong> anos.");
             mostra("Idade da minha irmã: <strong class='destaque'>" + (anoAtual - dtNascEvelyn) + "</strong> anos.");
             mostra("Nossa diferença de idade é de: <strong class='destaque'>" + (dtNascEvelyn - dtNascMagila) + "</strong> anos.");
@@ -252,6 +264,7 @@
             let massacrePortugues = 1500;
             let mediaGeracional = 28;
 
+            pularLinha();
             mostra("Faz <strong class='destaque'>" + (anoAtual - massacrePortugues) + "</strong> anos que os portugueses invadiram as terras indígenas.")
             mostra("Há <strong class='destaque'>" + Math.round((anoAtual - massacrePortugues) / mediaGeracional) + "</strong> gerações de brasileiros atualmente.");
         </script>
@@ -260,6 +273,7 @@
     <div class="mostra-idade">
         <h1>*** Mostrando a idade de várias pessoas: ***</h1>
         <script>
+            pularLinha();
             function mostraFrase(frase) {
                 document.write(frase);
                 proximaLinha();

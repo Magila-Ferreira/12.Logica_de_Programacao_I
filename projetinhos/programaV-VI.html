@@ -28,6 +28,7 @@
             let ImcLidy = calculaImc("Lidy", 67, 1.69);
             let ImcNah = calculaImc("Nah", 60, 1.69); 
 
+            pulaLinha();
             imprime(ImcMagila);
             imprime(ImcAndréa);
             imprime(ImcLidy);
@@ -43,6 +44,7 @@
 
             let somaImc = calculoDoImc(69, 1.69) + calculoDoImc(59, 1.65) + calculoDoImc(67, 1.69) + calculoDoImc(60, 1.69);
 
+            pulaLinha();
             imprime("<big>A soma dos IMC's é: <strong class='destaque'>" + somaImc.toFixed(2) + "</strong></big>");
             imprime("<big>A média dos IMC's é: <strong class='destaque'>" + (somaImc/4).toFixed(2) + "</strong></big>");
         </script>
@@ -52,9 +54,10 @@
         <h1>***  Interagindo com o Usuário  ***</h1>
         <script>
             nome = prompt("*** Bem vindo ao programa! *** Por favor, digite seu nome: ");
-            peso = prompt(nome + ", qual o seu peso?");
-            altura = prompt(nome + ", qual a sua altura?");
+            peso = parseFloat(prompt(nome + ", qual o seu peso?"));
+            altura = parseFloat(prompt(nome + ", qual a sua altura?"));
             
+            pulaLinha();
             imprime("<strong class='destaque>'>" +nome+ "</strong>, você pesa <strong class='destaque'>" + peso + "</strong>kg e possui <strong class='destaque'>"+altura+ "</strong>m de altura.");
 
             imc = calculoDoImc(peso, altura).toFixed(1);
@@ -93,6 +96,7 @@
 
             var comparacao = parseInt(prompt("Entre com o total de pontos do ano passado: "));
 
+            pulaLinha();
             imprime("<strong class='destaque'>" + time + ":</strong>");
             imprime("Vitórias: <strong class='destaque'>" + vitorias + ",</strong> Empates: <strong class='destaque'>" + empates + ", </strong> Derrotas: <strong class='destaque'>" + derrotas + ".</strong>");
 
