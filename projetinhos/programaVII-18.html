@@ -29,7 +29,7 @@
             pulaLinha();
             document.write("<p class='item'> 0" + numero + '</p>');
             pulaLinha();
-        }  
+        }
 
         function sorteia(n) {
             return Math.round(Math.random() * n);
@@ -46,6 +46,36 @@
                     }
                     pulaLinha();
                 }
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>Adivinha_mais</h1>
+        <div class="quadro-inferior">
+            <input/>
+            <button>
+                Compare os números
+            </button>
+
+            <script>
+                function verifica() {
+                    var segredo = Math.round(Math.random() * 10);
+                    var caixaInput = document.querySelector("input");
+                    caixaInput.focus();
+
+                    if (caixaInput.value == segredo) {
+                        alert("Você acertou!!!");
+                    } else {
+                        alert("Você errou! O número em segredo era: " + segredo);
+                    }
+                    caixaInput.value = " ";
+                    caixaInput.focus();
+                }
+                
+                var button = document.querySelector("button");
+                
+                button.onclick = verifica;
             </script>
         </div>
     </div>

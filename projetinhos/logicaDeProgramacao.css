@@ -45,6 +45,19 @@ div.quadro-inferior {
     border: none;
 }
 
+div.quadro-inferior input,
+div.quadro-inferior button {
+    margin: 1em 2em;
+    max-width: 35%;
+    text-align: center;
+}
+
+button {
+    background-image: repeating-linear-gradient(#ccc, #999);
+    border: solid 2px #fff;
+    font-weight: bolder;
+}
+
 div.copas {
     width: 90%;
     padding: 1em;
