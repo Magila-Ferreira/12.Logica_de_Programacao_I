@@ -53,28 +53,39 @@
     <div class="quadro-padrao">
         <h1>Adivinha_mais</h1>
         <div class="quadro-inferior">
-            <input/>
+            <input />
             <button>
                 Compare os números
             </button>
 
             <script>
                 function verifica() {
-                    var segredo = Math.round(Math.random() * 10);
+                    var segredos = [3, 9];
                     var caixaInput = document.querySelector("input");
                     caixaInput.focus();
+                    var achou = false;
 
-                    if (caixaInput.value == segredo) {
-                        alert("Você acertou!!!");
-                    } else {
-                        alert("Você errou! O número em segredo era: " + segredo);
+                    for (var posicao = 0; posicao < segredos.length; posicao++) {
+                        if (caixaInput.value == segredos[posicao]) {
+                            alert("Você acertou!!!");
+                            achou = true;
+                            break;
+                        } else {
+                            var segredo1 = segredos[0];
+                            var segredo2 = segredos[1]; 
+                        }
                     }
+
+                    if (achou == false) {
+                        alert("Você errou! Os números em segredo eram:     " + segredo1 + "  e  " + segredo2);
+                    }
+
                     caixaInput.value = " ";
                     caixaInput.focus();
                 }
-                
+
                 var button = document.querySelector("button");
-                
+
                 button.onclick = verifica;
             </script>
         </div>
