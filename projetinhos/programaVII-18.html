@@ -9,6 +9,20 @@
 </head>
 
 <body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+        }
+        big.item {
+            font-size: 1em;
+            padding: 1em auto;
+        }
+    </style>
+
     <!-- FUNÇÕES DO PROGRAMA -->
     <script>
         function pulaLinha() {
@@ -34,14 +48,45 @@
         function sorteia(n) {
             return Math.round(Math.random() * n);
         }
+
+        function sorteiaNumero() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function defineQuantidade(quantidade) {
+            var segredos = [];
+            var numero = 1;
+
+            while (numero <= quantidade) {
+                var numeroAleatorio = sorteiaNumero();
+
+                if (numeroAleatorio != 0) {
+                    var numeroRepetido = false;
+
+                    for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+                        if (segredos[posicao] == numeroAleatorio) {
+                            numeroRepetido = true;
+                            break;
+                        }
+                    }
+
+                    if (numeroRepetido == false) {
+                        segredos.push(numeroAleatorio);
+                        numero++;
+                    }
+                }
+            }
+            return segredos;
+        }
     </script>
 
     <div class="quadro-padrao">
         <h1>Programa de Estrelas</h1>
         <div class="quadro-inferior">
             <script>
-                for (var colunas = 0; colunas < 3; colunas++) {
-                    for (var linhas = 0; linhas < 10; linhas++) {
+                for (var colunas = 0; colunas < 10; colunas++) {
+                    for (var linhas = 0; linhas < 3; linhas++) {
                         mostra("*");
                     }
                     pulaLinha();
@@ -72,12 +117,13 @@
                             break;
                         } else {
                             var segredo1 = segredos[0];
-                            var segredo2 = segredos[1]; 
+                            var segredo2 = segredos[1];
+                            var segredo3 = segredos[2];
                         }
                     }
 
                     if (achou == false) {
-                        alert("Você errou! Os números em segredo eram:     " + segredo1 + "  e  " + segredo2);
+                        alert("Você errou! Os números em segredo eram:     " + segredo1 + ",  " + segredo2 + "  e  " + segredo3);
                     }
 
                     caixaInput.value = " ";
@@ -91,6 +137,79 @@
         </div>
     </div>
 
+    <div class="quadro-padrao">
+        <h1>Adivinha_sorteio_com_função</h1>
+        <div class="quadro-inferior">
+            <input class="sorteia-com-funcao" />
+            <button class="button-funcao">
+                Compare os números
+            </button>
+
+            <script>
+                function verificaComFuncao() {
+                    var segredos = defineQuantidade(5);
+                    var caixaInputFuncao = document.querySelector(".sorteia-com-funcao");
+                    caixaInputFuncao.focus();
+                    var encontrou = false;
+
+                    console.log(segredos);
+
+                    for (var posicao = 0; posicao < segredos.length; posicao++) {
+                        if (caixaInputFuncao.value == segredos[posicao]) {
+                            alert("Você acertou!!!");
+                            encontrou = true;
+                            break;
+                        } else {
+                            var segredo1 = segredos[0];
+                            var segredo2 = segredos[1];
+                            var segredo3 = segredos[2];
+                            var segredo4 = segredos[3];
+                            var segredo5 = segredos[4];
+                        }
+                    }
+
+                    if (encontrou == false) {
+                        alert("Você errou! Os números em segredo eram:     " + segredo1 + ",  " + segredo2 + ",  " + segredo3 + ",  " + segredo4 + "  e  " + segredo5);
+                    }
+
+                    caixaInputFuncao.value = " ";
+                    caixaInputFuncao.focus();
+                }
+
+                var buttonFuncao = document.querySelector(".button-funcao");
+
+                buttonFuncao.onclick = verificaComFuncao;
+            </script>
+        </div>
+    </div>
+
+    <div class="quadro-padrao">
+        <h1>Receitas do Yan</h1>
+        <div class="quadro-inferior justify">
+            <script>
+                var ingredientes = [];
+                var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+                var contador = 0;
+                
+                while (contador < quantidade) {
+                    var ingrediente = prompt("Informe o ingrediente " + (contador + 1));
+                    var novoIngrediente = true;
+                    
+                    for (var posicao = 0; posicao < ingredientes.length; posicao++) {
+                        if (ingredientes[posicao] == ingrediente) {
+                            novoIngrediente = false;
+                        }
+                    }
+
+                    if (novoIngrediente == true) {
+                        ingredientes.push(ingrediente);
+                        mostra((contador + 1) + "º ingrediente: " + ingredientes[posicao] + "<br><hr>");
+                        contador++;
+                    } 
+                }
+            </script>
+        </div>
+    </div>
 </body>
 
 </html>
